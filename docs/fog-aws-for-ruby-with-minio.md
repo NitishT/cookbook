@@ -1,4 +1,4 @@
-# How to use fog aws for Ruby with Minio Server [![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io)
+# How to use fog AWS for Ruby with Minio Server [![Slack](https://slack.minio.io/slack?type=svg)](https://slack.minio.io)
 
 `fog-aws` is the module for 'fog' gem to support Amazon Web Services <http://aws.amazon.com/>.
 In this recipe we will learn how to use `fog-aws` for Ruby with Minio server.
@@ -25,12 +25,11 @@ connection = Fog::Storage.new({
     aws_access_key_id:     'YOUR-ACCESSKEYID',
     aws_secret_access_key: 'YOUR-SECRETACCESSKEY',
     region:                'us-east-1',                  # optional, defaults to 'us-east-1',
-                                                         # Please mention other regions if you have changed
-                                                         # minio configuration
-    host:                  'localhost',              # Provide your host name here, otherwise fog-aws defaults to
+                                                         # Please mention other regions if you have changed minio configuration
+    host:                  'localhost',                  # Provide your host name here, otherwise fog-aws defaults to
                                                          # s3.amazonaws.com
-    endpoint:              'http://localhost:9000', # Required, otherwise defauls to nil
-    path_style:         	true,                        # Required
+    endpoint:              'http://localhost:9000',      # Required, otherwise defauls to nil
+    path_style:             true,                        # Required
 })
 
 
